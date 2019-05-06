@@ -30,10 +30,6 @@ public class TestController {
 
         String result = HttpClient.sendGet("http://v.juhe.cn/weather/index", params);
 
-        JSONObject jsonObject = JSON.parseObject(result);
-        JSONObject result1 = jsonObject.getJSONObject("result");
-        JSONObject today = result1.getJSONObject("today");
-        String temperature = today.getString("temperature");
         return temperature;
     }
 }
