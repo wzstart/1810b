@@ -41,7 +41,7 @@ public class TestController {
     public String test01(String cityName) {
 
 
-       //代码写的不错wqwqwqwqwqwqwqwqwqwqwqwqwqwqwwqwqw
+       //在github上直接修改
         Map<String, Object> params = new HashMap<>();
 
         params.put("cityname", cityName);
