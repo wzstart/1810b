@@ -36,4 +36,23 @@ public class TestController {
         String temperature = today.getString("temperature");
         return temperature;
     }
+    
+      @RequestMapping("test01")
+    public String test01(String cityName) {
+
+
+       //代码写的不错wqwqwqwqwqwqwqwqwqwqwqwqwqwqwwqwqw
+        Map<String, Object> params = new HashMap<>();
+
+        params.put("cityname", cityName);
+        params.put("key", "a00edacd6dedf1509dbffa2c3809824e");
+
+        String result = HttpClient.sendGet("http://v.juhe.cn/weather/index", params);
+
+        JSONObject jsonObject = JSON.parseObject(result);
+        JSONObject result1 = jsonObject.getJSONObject("result");
+        JSONObject today = result1.getJSONObject("today");
+        String temperature = today.getString("temperature");
+        return temperature;
+    }
 }
